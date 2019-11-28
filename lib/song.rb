@@ -35,10 +35,14 @@ class Song
   end
   def self.alphabetical
     song_names=[]
+    instances=[]
     @@all.each do |song|
       song_names << song.name
     end
-    song_names.sort
+    song_names.sort.each do |names|
+      instances << self.find_by_name(names)
+    end
+    instances
   end
   def self.new_from_filename(filename)
     @song=self.new_by_name(filename)
