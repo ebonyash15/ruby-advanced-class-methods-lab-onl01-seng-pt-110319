@@ -48,7 +48,7 @@ class Song
     seperated= filename.split(/-/)
     puts artist= seperated[0]
     name_file= seperated[1]
-    puts name= name_file.join(/\./)
+    puts name= name_file.split(/\./)
     @song= self.new_by_name(name)
     @song.class.artist_name=artist
     @song
