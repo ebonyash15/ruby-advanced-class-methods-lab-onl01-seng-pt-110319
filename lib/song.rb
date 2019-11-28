@@ -55,7 +55,13 @@ class Song
     @song
   end
   def self.create_from_filename(filename)
-    @song= self.create_by_name(filename)
+    seperated= filename.split(/\s-\s/)
+    puts artist= seperated[0]
+    name_file= seperated[1]
+    puts name_split= name_file.split(/\./)
+    name= name_split[0]
+    @song= self.create_by_name(name)
+    @song.artist_name=artist
     @song
   end
   def self.destroy_all
