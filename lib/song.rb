@@ -45,7 +45,7 @@ class Song
     instances
   end
   def self.new_from_filename(filename)
-    seperated= filename.split(/-\s/)
+    seperated= filename.split(/\s-\s/)
     puts artist= seperated[0]
     name_file= seperated[1]
     puts name_split= name_file.split(/\./)
