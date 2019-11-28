@@ -38,7 +38,7 @@ class Song
     @@all.each do |song|
       song_names << song.name
     end
-    song_names
+    song_names.sort
   end
   def self.new_from_filename(filename)
     @song=self.new_by_name(filename)
