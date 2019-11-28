@@ -50,7 +50,7 @@ class Song
     name_file= seperated[1]
     puts name= name_file.split(/\./)
     @song= self.new_by_name(name)
-    @song.self.artist_name=artist
+    @song.artist_name=artist
     @song
   end
   def self.create_from_filename(filename)
