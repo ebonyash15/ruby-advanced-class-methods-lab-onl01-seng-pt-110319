@@ -32,14 +32,7 @@ class Song
     end
   end
   def self.find_or_create_by_name(name)
-    if !@@all.include?(song.name == name)
-    @song = self.create
-    @song.name = song_name
-    @song
-    else
-    @song.name
-    end
-    @song
+    self.find_by_name(name) || self.create_by_name(name)
   end
   def self.alphabetical
     @@all.sort
