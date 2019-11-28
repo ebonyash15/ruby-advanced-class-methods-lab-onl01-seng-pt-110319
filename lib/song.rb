@@ -8,7 +8,7 @@ class Song
     self.class.all << self
   end
   def self.create
-    @song=self.new
+    @song= self.new
     @song.save
     @song
   end
@@ -24,7 +24,7 @@ class Song
   end
   def self.find_by_name(song_name)
     @@all.each do |song|
-      if @song.name == song_name
+      if song.name == song_name
         return song
       elsif !@@all.include?(song_name)
          false
