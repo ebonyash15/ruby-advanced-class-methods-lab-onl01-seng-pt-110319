@@ -45,7 +45,10 @@ class Song
     instances
   end
   def self.new_from_filename(filename)
-    @song= self.new_by_name(filename)
+    puts seperated = filename.join(/\W\S/)
+
+    @song= self.new_by_name(name)
+    @song.class.artist_name=artist
     @song
   end
   def self.create_from_filename(filename)
