@@ -46,9 +46,9 @@ class Song
   end
   def self.new_from_filename(filename)
     seperated= filename.split(/\s-\s/)
-    puts artist= seperated[0]
+    artist= seperated[0]
     name_file= seperated[1]
-    puts name_split= name_file.split(/\./)
+    name_split= name_file.split(/\./)
     name= name_split[0]
     @song= self.new_by_name(name)
     @song.artist_name=artist
@@ -56,9 +56,9 @@ class Song
   end
   def self.create_from_filename(filename)
     seperated= filename.split(/\s-\s/)
-    puts artist= seperated[0]
+    artist= seperated[0]
     name_file= seperated[1]
-    puts name_split= name_file.split(/\./)
+    name_split= name_file.split(/\./)
     name= name_split[0]
     @song= self.create_by_name(name)
     @song.artist_name=artist
